@@ -1,7 +1,7 @@
 download.file(method = 'curl', 
               'http://www.amstat.org/publications/jse/v9n2/4Cdata.txt',
-              destfile = '/tmp/diamond_data.txt')
-df <- read.csv('/tmp/diamond_data.txt', sep = '', header = F)
+              destfile = 'tmp_diamond_data.txt')
+df <- read.csv('tmp_diamond_data.txt', sep = '', header = F)
 colnames(df) <- c('carat', 'color', 'clarity', 'certification.body', 'price')
 model4c <- lm(price ~ ., data = df)
 summary(model4c)
