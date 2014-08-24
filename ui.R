@@ -1,7 +1,8 @@
 shinyUI(pageWithSidebar( 
                 headerPanel("Diamond Price Calculator (in Singapore Dollars)"), 
                 sidebarPanel(
-                        numericInput('carats', 'carat weight (0.0 - 1.0)', 
+                        numericInput('carats', 
+                                     'carat weight (please enter 0.0 - 1.0)', 
                                      min = 0, max = 1, step = 0.05, 
                                      value = 0.5), 
                         radioButtons("color",
@@ -14,7 +15,7 @@ shinyUI(pageWithSidebar(
                                              "VVS2" = "VVS2", 'VS1' = 'VS1',
                                              'VS2' = 'VS2')),
                         radioButtons('certification.body',
-                                           'certification.body (please choose one)',
+                                           'certification body (please choose one)',
                                            c("GIA" = "GIA", "HRD" = "HRD",
                                            "IGI" = "IGI")),
                         actionButton("goButton", "Calculate!")
